@@ -52,7 +52,8 @@ WEATHER_API=your_token_from_https://www.weatherapi.com/
 ```
 TG_W/
 ├── bot/
-│   └── bot_commands.go├── database/
+│   └── bot_commands.go
+├──database/
 │   └── pg_commands.go
 │
 ├── logs/ This folder might not exist. You can either create it manually, or use make to handle it for you.
