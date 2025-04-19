@@ -1,0 +1,47 @@
+{
+  "location": {
+    "name": "Малая Вишера",
+    "region": "Novgorod",
+    "country": "Россия",
+    "lat": 58.85,
+    "lon": 32.2333,
+    "tz_id": "Europe/Moscow",
+    "localtime_epoch": 1744303827,
+    "localtime": "2025-04-10 19:50"
+  },
+  "current": {
+    "last_updated_epoch": 1744303500,
+    "last_updated": "2025-04-10 19:45",
+    "temp_c": -1.7,
+    "temp_f": 28.9,
+    "is_day": 1,
+    "condition": {
+      "text": "Солнечно",
+      "icon": "//cdn.weatherapi.com/weather/64x64/day/113.png",
+      "code": 1000
+    },
+    "wind_mph": 4.9,
+    "wind_kph": 7.9,
+    "wind_degree": 335,
+    "wind_dir": "NNW",
+    "pressure_mb": 1007,
+    "pressure_in": 29.73,
+    "precip_mm": 0,
+    "precip_in": 0,
+    "humidity": 67,
+    "cloud": 4,
+    "feelslike_c": -4.7,
+    "feelslike_f": 23.5,
+    "windchill_c": -4.7,
+    "windchill_f": 23.5,
+    "heatindex_c": -1.7,
+    "heatindex_f": 28.9,
+    "dewpoint_c": -6.9,
+    "dewpoint_f": 19.5,
+    "vis_km": 10,
+    "vis_miles": 6,
+    "uv": 0.1,
+    "gust_mph": 7.4,
+    "gust_kph": 12
+  }
+}
