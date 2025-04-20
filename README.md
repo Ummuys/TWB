@@ -34,7 +34,7 @@
 
 ```bash
 git clone https://github.com/Ummuys/TWB.git
-cd TG_W
+cd TWB
 go mod tidy
 make or go run main.go
 ```
@@ -50,7 +50,7 @@ WEATHER_API=your_token_from_https://www.weatherapi.com/
 ## 🧩 Структура проекта
 
 ```
-TG_W/
+TWB/
 ├── bot/
 │   └── bot_commands.go
 ├──database/
