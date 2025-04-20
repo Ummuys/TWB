@@ -7,7 +7,7 @@ import (
 	"sync"
 	"time"
 
-	weather "github.com/Ummuys/TG_W/weather"
+	weather "github.com/Ummuys/TWB/weather"
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api/v5"
 	"go.uber.org/zap"
 )

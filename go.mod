@@ -1,4 +1,4 @@
-module github.com/Ummuys/TG_W
+module github.com/Ummuys/TWB
 
 go 1.23.0
 

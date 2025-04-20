@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	botCMD "github.com/Ummuys/TG_W/bot"
+	botCMD "github.com/Ummuys/TWB/bot"
 	"github.com/jackc/pgx/v5"
 	"github.com/jackc/pgx/v5/pgxpool"
 	_ "github.com/lib/pq"
@@ -27,10 +27,10 @@ func Connect(connect string) (*pgxpool.Pool, context.Context, error) {
 
 func CreateItems(logger *zap.Logger, pool *pgxpool.Pool, ctx context.Context) error {
 	queryCreateSchema := `
-	CREATE SCHEMA IF NOT EXISTS tg_w;
+	CREATE SCHEMA IF NOT EXISTS twb;
 	`
 	queryCreateTable := `
-	CREATE TABLE IF NOT exists tg_w.user_tg_info(
+	CREATE TABLE IF NOT exists twb.user_tg_info(
 	id bigint primary key,
 	user_state varchar(10) default '',
 	fav_city1 varchar(20) default '',
@@ -55,7 +55,7 @@ func CreateItems(logger *zap.Logger, pool *pgxpool.Pool, ctx context.Context) er
 
 func GetInfoFromTable(logger *zap.Logger, pool *pgxpool.Pool, ctx context.Context, usersInfo map[int64]botCMD.ChatInfo) error {
 	// Data from table
-	query := `SELECT id, user_state, fav_city1, fav_city2, fav_city3 FROM tg_w.user_tg_info`
+	query := `SELECT id, user_state, fav_city1, fav_city2, fav_city3 FROM twb.user_tg_info`
 
 	rows, err := pool.Query(ctx, query)
 	if err != nil {
@@ -85,7 +85,7 @@ func FillInfoFromMap(ctx context.Context, pool *pgxpool.Pool, data map[int64]bot
 
 	for _, chatInfo := range data {
 		sql := `
-			INSERT INTO tg_w.user_tg_info (id, user_state, fav_city1, fav_city2, fav_city3)
+			INSERT INTO twb.user_tg_info (id, user_state, fav_city1, fav_city2, fav_city3)
 			VALUES ($1, $2, $3, $4, $5)
 			ON CONFLICT (id) DO UPDATE
 			SET 

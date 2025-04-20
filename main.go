@@ -14,8 +14,8 @@ import (
 	"sync"
 	"time"
 
-	botCMD "github.com/Ummuys/TG_W/bot"
-	dbCMD "github.com/Ummuys/TG_W/database"
+	botCMD "github.com/Ummuys/TWB/bot"
+	dbCMD "github.com/Ummuys/TWB/database"
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api/v5"
 	"github.com/joho/godotenv"
 	"go.uber.org/zap"
