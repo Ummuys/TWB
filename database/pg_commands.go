@@ -55,7 +55,7 @@ func CreateItems(logger *zap.Logger, pool *pgxpool.Pool, ctx context.Context) er
 
 func GetInfoFromTable(logger *zap.Logger, pool *pgxpool.Pool, ctx context.Context, usersInfo map[int64]botCMD.ChatInfo) error {
 	// Data from table
-	query := `SELECT id, user_state, fav_city1, fav_city2, fav_city3 FROM twb.user_tg_info`
+	query := `SELECT id, user_state, fav_city1, fav_city2, fav_city3 FROM twb.chats_info`
 
 	rows, err := pool.Query(ctx, query)
 	if err != nil {
@@ -85,7 +85,7 @@ func FillInfoFromMap(ctx context.Context, pool *pgxpool.Pool, data map[int64]bot
 
 	for _, chatInfo := range data {
 		sql := `
-			INSERT INTO twb.user_tg_info (id, user_state, fav_city1, fav_city2, fav_city3)
+			INSERT INTO twb.chats_info (id, user_state, fav_city1, fav_city2, fav_city3)
 			VALUES ($1, $2, $3, $4, $5)
 			ON CONFLICT (id) DO UPDATE
 			SET 
