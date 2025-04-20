@@ -43,7 +43,7 @@ make or go run main.go
 
 ```
 BOT_API=your_tg_bot_token
-CONNECT=postgres://user:pass@your_host:your_port/your_database?sslmode=disable # +
+CONNECT=postgres://user:pass@your_host:your_port/your_database?sslmode=your_mode # +
 WEATHER_API=your_token_from_https://www.weatherapi.com/
 ```
 
