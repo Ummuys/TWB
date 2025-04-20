@@ -30,7 +30,7 @@ func CreateItems(logger *zap.Logger, pool *pgxpool.Pool, ctx context.Context) er
 	CREATE SCHEMA IF NOT EXISTS twb;
 	`
 	queryCreateTable := `
-	CREATE TABLE IF NOT exists twb.user_tg_info(
+	CREATE TABLE IF NOT exists twb.chats_info(
 	id bigint primary key,
 	user_state varchar(10) default '',
 	fav_city1 varchar(20) default '',
